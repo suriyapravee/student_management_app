@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>signin</title>
+</head>
+<body  style="background-color:black;color:white;">
+<center style="margin:10%">
+<form action="/signin/" method="post">
+    Username: <input type="text" name="username"><br>
+    Password: <input type="password" name="password"><br>
+    {%csrf_token%}
+    <a href="/home"><button type="submit">submit</button></a>
+</form>
+</center>
+</body>
+
+
+
+
+</html>

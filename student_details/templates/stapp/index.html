@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>student database</title>
+</head>
+<body style="background-color:black;color:white;">
+<center style="margin:10%">
+    <h1>STUDENT DETAILS</h1>
+<table border="5" style="font-size:x-large;">
+{% if student_data %}
+{% for Student in student_data %}
+    <tr>
+        <td>{{Student.stu_name}}</td>
+        <td>{{Student.sid}}</td>
+        <td>{{Student.dept_name}}</td>
+        <td>{{Student.did}}</td>
+        <td>{{Student.college_name}}</td>
+        <td><a href="/edit/{{Student.id}}"><button type="button">Update</button></a></td>
+        <td><a href="/del/{{Student.id}}"><button type="button">Delete</button></a></td>
+    </tr>
+
+
+{% endfor %}
+{% endif %}
+</table>
+<a href="/add"><button type="submit">add student</button></a>
+</center>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit student</title>
+</head>
+<body style="background-color:brown;">
+
+<center style="margin:20%;background-color:aqua;">
+<form method="post">
+    <table id="update">
+        <tr>
+            <th>Student name:</th>
+            <th>Student id:</th>
+            <th>Department name:</th>
+            <th>Department id:</th>
+            <th>college name:</th>
+
+        </tr>
+        <tr>
+        <td><input type="text" name="stu_name"  value="{{student.stu_name}}"></td>
+        <td><input type="text" name="sid"  value="{{student.sis}}"></td>
+        <td><input type="text" name="dept_name"  value="{{student.dept_name}}"></td>
+        <td><input type="text" name="did"  value="{{student.did}}"></td>
+        <td><input type="text" name="college_name"  value="{{student.college_name}}"></td>
+        </tr>
+    </table>
+    {%csrf_token%}
+<input type="submit" value="update">
+</form>
+</center>
+
+</body>
+</html>
+
